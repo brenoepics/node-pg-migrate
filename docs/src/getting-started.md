@@ -1,4 +1,4 @@
-# Getting Started 
+# Getting Started
 
 ## Preconditions
 
@@ -58,12 +58,12 @@ Installing this module adds a runnable file into your `node_modules/.bin` direct
 
 Add `node-pg-migrate` to `scripts` section of your `package.json` so you are able to quickly run commands.
 
-```json
+```jsonc
 {
   "scripts": {
     // ..
     "migrate": "node-pg-migrate" // [!code ++]
-  },
+  }
 }
 ```
 
