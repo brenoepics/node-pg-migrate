@@ -26,7 +26,7 @@ describe('operations', () => {
           schema: 'myschema',
         });
         expect(statement).toBe(
-          'CREATE OPERATOR FAMILY "integer_ops" USING "myschema"."btree";'
+          'CREATE OPERATOR FAMILY "integer_ops" USING myschema.btree;'
         );
       });
 

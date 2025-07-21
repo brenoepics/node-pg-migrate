@@ -21,7 +21,7 @@ export function createOperatorFamily(
   const _create: CreateOperatorFamily = (operatorFamilyName, indexMethod) => {
     const operatorFamilyNameStr = mOptions.literal(operatorFamilyName);
 
-    return `CREATE OPERATOR FAMILY ${operatorFamilyNameStr} USING ${indexMethod};`;
+    return `CREATE OPERATOR FAMILY ${operatorFamilyNameStr} USING ${mOptions.schemalize(indexMethod)};`;
   };
 
   _create.reverse = dropOperatorFamily(mOptions);
