@@ -25,7 +25,7 @@ export const addToOperatorFamily = (
       .map(operatorMap(mOptions))
       .join(',\n  ');
 
-    return `ALTER OPERATOR FAMILY ${operatorFamilyNameStr} USING ${indexMethod} ADD
+    return `ALTER OPERATOR FAMILY ${operatorFamilyNameStr} USING ${mOptions.schemalize(indexMethod)} ADD
   ${operatorListStr};`;
   };
 

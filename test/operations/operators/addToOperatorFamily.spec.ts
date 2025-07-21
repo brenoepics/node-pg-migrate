@@ -108,7 +108,7 @@ describe('operations', () => {
 
         expect(statement).toBeTypeOf('string');
         expect(statement).toBe(
-          `ALTER OPERATOR FAMILY "myschema"."integer_ops" USING "other_schema"."btree" ADD
+          `ALTER OPERATOR FAMILY "myschema"."integer_ops" USING other_schema.btree ADD
   OPERATOR 1 "<"(int4, int2),
   OPERATOR 2 "<="(int4, int2),
   OPERATOR 3 "="(int4, int2),
